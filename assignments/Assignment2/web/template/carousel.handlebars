@@ -1,0 +1,23 @@
+	<div id="carousel-{{id}}" class="carousel slide">
+		<ol class="carousel-indicators">
+			{{#carouselIndicators largeImages}}
+				<li data-target="#carousel-{{../id}}" data-slide-to="{{i}}" class="active"></li>
+			{{else}}
+				<li data-target="#carousel-{{../id}}" data-slide-to="{{i}}"></li>				
+			{{/carouselIndicators}}
+		</ol>
+		<!-- Carousel items -->
+		<div class="carousel-inner">	
+			{{#carouselInner largeImages}}
+
+				<div class="active item"><img src="{{largeImage}}" /></div>
+			{{else}}
+				<div class="item"><img src="{{largeImage}}" /></div>
+
+			{{/carouselInner}}
+		</div>
+		<!-- Carousel nav -->
+		<a class="carousel-control left" href="#carousel-{{id}}"
+			data-slide="prev">&lsaquo;</a> <a class="carousel-control right"
+			href="#carousel-{{id}}" data-slide="next">&rsaquo;</a>
+	</div>
