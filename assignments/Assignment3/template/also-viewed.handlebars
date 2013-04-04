@@ -1,0 +1,21 @@
+		<table width="100%">
+			<tr>
+				<!-- <%
+					var productCount = products.length;
+					var len = 3;
+					for (var i = 0; i < len; i++) {
+						var randomProduct = products[Math.floor(Math.random() * productCount)];
+				%> -->
+				{{#alsoViewedProducts}}
+				<td width="33%">
+					<img src="{{image}}" /><br/>
+						<div>{{name}}</div>
+						<div>${{price}}</div>
+						<div class="rating" data-score="{{rating}}"></div>
+				</td>
+				{{/alsoViewedProducts}}
+				<!-- <%
+					}
+				%> -->
+			</tr>
+		</table>
